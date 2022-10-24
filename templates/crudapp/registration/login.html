@@ -1,0 +1,22 @@
+{% load static %}
+{% block login %}
+	<link rel="stylesheet" href="{% static '/style/css/reset.css' %}">
+	<link rel="stylesheet" href="{% static '/style/css/animate.css' %}">
+	<link rel="stylesheet" href="{% static '/style/css/styles.css' %}">
+
+	{{form.errors}}
+	<div id="container">
+		<form  method="POST" action="{% url 'login' %}">
+			{% csrf_token %}
+			<label for="name">Логин:</label>
+			{{ form.username }}
+			<label for="password">Пароль:</label>
+			{{ form.password }}
+			<div id="lower">
+				<input type="submit" value="Войти">
+		</form>
+		</div>
+	</div>
+</body>
+</html>
+{% endblock %}

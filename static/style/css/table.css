@@ -1,0 +1,55 @@
+table {
+   border-collapse: collapse;
+   border: 3px solid grey;
+   text-align: center;
+   }
+
+td {
+    border: 1px solid grey;
+    font-size: 10px;
+}
+
+.vertical {
+    writing-mode: vertical-rl;
+    height: 100px;
+}
+
+.tabletitle {
+    font-weight: bold;
+}
+
+.fields {
+    background: #FFFACD;
+}
+
+.date {
+    background: #F0E68C;
+}
+
+.first_header {
+    background: #496E7D;
+}
+
+.first {
+    background: #87CEEB;
+}
+
+.second_header {
+    background: #A85A5A;
+}
+
+.second {
+    background: #F08080;
+}
+
+.third_header {
+    background: #648464;
+}
+
+.third {
+    background: #8FBC8F;
+}
+
+.number {
+    background: #CCCCCC;
+}

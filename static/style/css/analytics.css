@@ -1,0 +1,104 @@
+.toplabel {
+    position: absolute;
+    font: bold 7vh system-ui;
+    top: 3%;
+    right: 25%;
+    color: green;
+}
+
+.mediumlabel {
+    position: absolute;
+    font: bold 4.3vh system-ui;
+    right: 4%;
+    color: green;
+}
+
+img {
+    position: absolute;
+}
+
+#med1 {
+    top: 4%
+}
+
+#med2 {
+    top: 8%
+}
+
+#imggeneral {
+    top: 0%;
+    left: 0%;
+    height: 50%;
+    width: 53%;
+}
+
+#imgpieleft {
+    left: 1%;
+    bottom: 10%;
+}
+
+#imgpieright {
+    left: 25%;
+    bottom: 10%;
+}
+
+#imgpiewest {
+    right: 30%;
+    top: 20%;
+}
+
+#imgpiesouth {
+    right: 5%;
+    top: 20%;
+}
+
+#imgpiecenter {
+    right: 30%;
+    top: 45%;
+}
+
+#imgpieeast {
+    right: 5%;
+    top: 45%;
+}
+
+#imgpienorth {
+    right: 30%;
+    top: 70%;
+}
+
+#imgpiecp {
+    right: 5%;
+    top: 70%;
+}
+
+#start {
+    position: absolute;
+    bottom: 3%;
+    left: 10%;
+}
+
+#end {
+    position: absolute;
+    bottom: 3%;
+    left: 20%;
+}
+
+#datebutton {
+    position: absolute;
+    bottom: 3%;
+    left: 30%;
+}
+
+.bigpie {
+    position: absolute;
+    width: 23%;
+    height: 34%;
+}
+
+.smallpie {
+    position: absolute;
+    width: 18%;
+    height: 27%;
+
+}

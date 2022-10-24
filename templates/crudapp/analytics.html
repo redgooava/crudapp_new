@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>test_table</title>
+    <link rel="stylesheet" href="{% static '/style/css/analytics.css' %}">
+</head>
+<body>
+    <form method = "POST">
+        {% csrf_token %}
+        <input type="date" id="start" name="start" value="2022-01-01">
+        <input type="date" id="end" name="end" value="2022-01-01">
+        <input type="submit" id="datebutton" value="Применить">
+    </form>
+
+    <img src="data:image/png; base64,{{ chart }}" alt="" id="imggeneral">
+    <img src="data:image/png; base64,{{ pie_reasons }}" class="bigpie" alt="" id="imgpieleft">
+    <img src="data:image/png; base64,{{ pie_mil_districts }}" class="bigpie" alt="" id="imgpieright">
+
+    <img src="data:image/png; base64,{{ pie_cp }}" alt="" class="smallpie" id="imgpiewest">
+    <img src="data:image/png; base64,{{ pie_west }}" alt="" class="smallpie" id="imgpiesouth">
+    <img src="data:image/png; base64,{{ pie_south }}" alt="" class="smallpie" id="imgpiecenter">
+    <img src="data:image/png; base64,{{ pie_center }}" alt="" class="smallpie" id="imgpieeast">
+    <img src="data:image/png; base64,{{ pie_east}}" alt="" class="smallpie" id="imgpienorth">
+    <img src="data:image/png; base64,{{ pie_north }}" alt="" class="smallpie" id="imgpiecp">
+
+    <h1 class="toplabel">Общее число: </h1>
+    <h2 class="mediumlabel" id="med1">занятых коек: {{ ill_for_screen_all }}</h2>
+    <h2 class="mediumlabel" id="med2">свободных коек: {{ free_doss_for_chart_value_sum }}</h2>
+
+</body>
+</html>

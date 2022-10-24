@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>test_table</title>
+    <link rel="stylesheet"  href="{% static '/style/css/table.css' %}">
+</head>
+<body>
+    <form method = "POST">
+        {% csrf_token %}
+        {{ form }}
+        <input type = "submit" value = "Применить">
+    </form>
+    <table cellpadding="4">
+        <tr>
+            <td class="tabletitle date" colspan="1" rowspan="6">Дата</td>
+            <td class="tabletitle date" colspan="1" rowspan="6">Военный округ</td>
+            <td class="tabletitle date" colspan="1" rowspan="6">Госпиталь</td>
+            <td class="tabletitle first_header" colspan="16">Раздел 1. Всего коек в ВМО</td>
+            <td class="tabletitle second_header" colspan="16">Раздел 2. Количество пациентов с коронавирусной инфекцией</td>
+            <td class="tabletitle third_header" colspan="8">Раздел 3. Количество военнослужащих в зоне ответственности ВМО</td>
+        </tr>
+        <tr>
+            <td class="tabletitle first" colspan="2" rowspan="2">Развернуто</td>
+            <td class="tabletitle first" colspan="2" rowspan="2">Занято</td>
+            <td class="tabletitle first" colspan="12" rowspan="1">В том числе</td>
+            <td class="tabletitle second" colspan="2" rowspan="3">Cостояло по состоянию на 9:00 предыдущих суток</td>
+            <td class="tabletitle second" colspan="2" rowspan="3">Поступило в течение суток</td>
+            <td class="tabletitle second" colspan="2" rowspan="3">Выбыло с определившимся исходом в течение суток</td>
+            <td class="tabletitle second" colspan="2" rowspan="3">Переведено в другие медицинские организации в течение суток</td>
+            <td class="tabletitle second" colspan="8" rowspan="2">Состоит на 9:00 текущих суток</td>
+            <td class="tabletitle third" colspan="5" rowspan="2">С коронавирусной инфекцией</td>
+            <td class="tabletitle third" colspan="3" rowspan="2">Контактных по коронавирусной инфекции</td>
+        </tr>
+        <tr>
+            <td class="tabletitle first" colspan="4" rowspan="1">Инфекционные</td>
+            <td class="tabletitle first" colspan="4" rowspan="1">Реанимационные</td>
+            <td class="tabletitle first" colspan="4" rowspan="1">Прочие</td>
+        </tr>
+        <tr>
+            <td class="vertical tabletitle first" colspan="1" rowspan="3">Всего</td>
+            <td class="vertical tabletitle first" colspan="1" rowspan="3">Из них по COVID-19</td>
+            <td class="vertical tabletitle first" colspan="1" rowspan="3">Всего</td>
+            <td class="vertical tabletitle first" colspan="1" rowspan="3">Из них с пациентами с COVID-19</td>
+            <td class="tabletitle first" colspan="2" rowspan="1">Развёрнуто</td>
+            <td class="tabletitle first" colspan="2" rowspan="1">Занято</td>
+            <td class="tabletitle first" colspan="2" rowspan="1">Развёрнуто</td>
+            <td class="tabletitle first" colspan="2" rowspan="1">Занято</td>
+            <td class="tabletitle first" colspan="2" rowspan="1">Развёрнуто</td>
+            <td class="tabletitle first" colspan="2" rowspan="1">Занято</td>
+            <td class="tabletitle second" colspan="2" rowspan="1">Всего</td>
+            <td class="tabletitle second" colspan="2" rowspan="1">Подтвержденных лабораторно</td>
+            <td class="tabletitle second" colspan="2" rowspan="1">С пневмонией</td>
+            <td class="tabletitle second" colspan="2" rowspan="1">В тяжелом состоянии</td>
+            <td class="vertical tabletitle third" colspan="1" rowspan="3">Всего</td>
+            <td class="tabletitle third" colspan="3" rowspan="1">В медицинских учреждениях государственной и муниципальной систем здравоохранения</td>
+            <td class="vertical tabletitle third" colspan="1" rowspan="3">На дому</td>
+            <td class="vertical tabletitle third" colspan="1" rowspan="3">Всего</td>
+            <td class="vertical tabletitle third" colspan="1" rowspan="3">В обсерваторе</td>
+            <td class="vertical tabletitle third" colspan="1" rowspan="3">На дому</td>
+        </tr>
+        <tr>
+            <td class="vertical tabletitle first" colspan="1" rowspan="2">Всего</td>
+            <td class="vertical tabletitle first" colspan="1" rowspan="2">Из них под COVID-19</td>
+            <td class="vertical tabletitle first" colspan="1" rowspan="2">Всего</td>
+            <td class="vertical tabletitle first" colspan="1" rowspan="2">Из них с пациентами COVID-19</td>
+            <td class="vertical tabletitle first" colspan="1" rowspan="2">Всего</td>
+            <td class="vertical tabletitle first" colspan="1" rowspan="2">Из них под COVID-19</td>
+            <td class="vertical tabletitle first" colspan="1" rowspan="2">Всего</td>
+            <td class="vertical tabletitle first" colspan="1" rowspan="2">Из них с пациентами COVID-19</td>
+            <td class="vertical tabletitle first" colspan="1" rowspan="2">Всего</td>
+            <td class="vertical tabletitle first" colspan="1" rowspan="2">Из них под COVID-19</td>
+            <td class="vertical tabletitle first" colspan="1" rowspan="2">Всего</td>
+            <td class="vertical tabletitle first" colspan="1" rowspan="2">Из них с пациентами COVID-19</td>
+            <td class="vertical tabletitle second" colspan="1" rowspan="2">Всего</td>
+            <td class="vertical tabletitle second" colspan="1" rowspan="2">В т.ч. в/с</td>
+            <td class="vertical tabletitle second" colspan="1" rowspan="2">Всего</td>
+            <td class="vertical tabletitle second" colspan="1" rowspan="2">В т.ч. в/с</td>
+            <td class="vertical tabletitle second" colspan="1" rowspan="2">Всего</td>
+            <td class="vertical tabletitle second" colspan="1" rowspan="2">В т.ч. в/с</td>
+            <td class="vertical tabletitle second" colspan="1" rowspan="2">Всего</td>
+            <td class="vertical tabletitle second" colspan="1" rowspan="2">В т.ч. в/с</td>
+            <td class="vertical tabletitle second" colspan="1" rowspan="2">Всего</td>
+            <td class="vertical tabletitle second" colspan="1" rowspan="2">В т.ч. в/с</td>
+            <td class="vertical tabletitle second vertical" colspan="1" rowspan="2">Всего</td>
+            <td class="vertical tabletitle second" colspan="1" rowspan="2">В т.ч. в/с</td>
+            <td class="vertical tabletitle second" colspan="1" rowspan="2">Всего</td>
+            <td class="vertical tabletitle second" colspan="1" rowspan="2">В т.ч. в/с</td>
+            <td class="vertical tabletitle second" colspan="1" rowspan="2">Всего</td>
+            <td class="vertical tabletitle second" colspan="1" rowspan="2">В т.ч. в/с</td>
+            <td class="vertical tabletitle third" colspan="1" rowspan="2">Всего</td>
+            <td class="vertical tabletitle third" colspan="1" rowspan="2">С пневмонией</td>
+            <td class="vertical tabletitle third" colspan="1" rowspan="2">В тяжёлом состоянии</td>
+        </tr>
+        <tr></tr> <!-- это фикс. Чтобы узнать, что он фиксит, убери эту строчку и пойми -->
+        {% for i in filtered_data %}
+            <tr class="fields">
+                <td>{{ i.cell_46 }}</td>
+                <td>{{ i.cell_48 }}</td>
+                <td>{{ i.cell_45 }}</td>
+                <td>{{ i.cell_5 }}</td>
+                <td>{{ i.cell_6 }}</td>
+                <td>{{ i.cell_7 }}</td>
+                <td>{{ i.cell_8 }}</td>
+                <td>{{ i.cell_9 }}</td>
+                <td>{{ i.cell_10 }}</td>
+                <td>{{ i.cell_11 }}</td>
+                <td>{{ i.cell_12 }}</td>
+                <td>{{ i.cell_13 }}</td>
+                <td>{{ i.cell_14 }}</td>
+                <td>{{ i.cell_15 }}</td>
+                <td>{{ i.cell_16 }}</td>
+                <td>{{ i.cell_17 }}</td>
+                <td>{{ i.cell_18 }}</td>
+                <td>{{ i.cell_19 }}</td>
+                <td>{{ i.cell_20 }}</td>
+                <td>{{ i.cell_21 }}</td>
+                <td>{{ i.cell_22 }}</td>
+                <td>{{ i.cell_23 }}</td>
+                <td>{{ i.cell_24 }}</td>
+                <td>{{ i.cell_25 }}</td>
+                <td>{{ i.cell_26 }}</td>
+                <td>{{ i.cell_27 }}</td>
+                <td>{{ i.cell_28 }}</td>
+                <td>{{ i.cell_29 }}</td>
+                <td>{{ i.cell_30 }}</td>
+                <td>{{ i.cell_31 }}</td>
+                <td>{{ i.cell_32 }}</td>
+                <td>{{ i.cell_33 }}</td>
+                <td>{{ i.cell_34 }}</td>
+                <td>{{ i.cell_35 }}</td>
+                <td>{{ i.cell_36 }}</td>
+                <td>{{ i.cell_37 }}</td>
+                <td>{{ i.cell_38 }}</td>
+                <td>{{ i.cell_39 }}</td>
+                <td>{{ i.cell_40 }}</td>
+                <td>{{ i.cell_41 }}</td>
+                <td>{{ i.cell_42 }}</td>
+                <td>{{ i.cell_43 }}</td>
+                <td>{{ i.cell_44 }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

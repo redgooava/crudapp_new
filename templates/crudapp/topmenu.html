@@ -1,0 +1,12 @@
+<div class="header">
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid inside">
+            {% if request.user.is_authenticated %}
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Hello {{ request.user.username }}</a></li>
+            <a href="{% url 'logout' %}">Logout</a>
+            {% else %}
+                <li><a href="{% url 'login' %}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            {% endif %}
+      </div>
+    </nav>
+</div>
